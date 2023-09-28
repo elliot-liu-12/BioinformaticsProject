@@ -89,7 +89,7 @@ dds <- DESeqDataSetFromMatrix(countData = round(data[-1]), colData = col_data, d
 vsd <- vst(dds, blind = FALSE)
 plotPCA(vsd, intgroup="refinebio_time")
 
-#UMAP plot
+#tsne plot
 tsne(data[,-1], labels=as.factor(col_data$refinebio_time))
 
 #generate volcano plot
